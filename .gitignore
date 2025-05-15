@@ -1,7 +1,8 @@
-# compiled output
+# Compiled output
 /dist
 /node_modules
 /build
+/.swc
 
 # Logs
 logs
@@ -11,6 +12,8 @@ pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+log/
+*.log.*
 
 # OS
 .DS_Store
@@ -34,13 +37,27 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+*.code-workspace
+.history/
+.ionide
 
-# dotenv environment variable files
+# Environment & Secret Files
 .env
 .env.development.local
 .env.test.local
 .env.production.local
 .env.local
+.env.development
+.env.production
+.env.test
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+*secret*
+*credential*
+.secrets
 
 # temp directory
 .temp
@@ -54,3 +71,33 @@ pids
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Local development
+.localdev/
+.dev/
+local.settings.json
+
+# Cache directories
+.npm
+.eslintcache
+.stylelintcache
+.prettiercache
+.cache/
+
+# Cloud deployment files
+.serverless/
+.vercel/
+.netlify/
+.azure/
+.github/workflows/*.yml.backup
+azureauth.json
+
+# Debug files
+.debug
+debug.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# WhatsApp API specific
+*whatsapp-api-credentials*
